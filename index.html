@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script>
+
+</script>
+    
+</head>
+
+<body>
+
+
+    <div id="page">
+        <!-- Sección del encabezado -->
+        <div id="header">
+            <p class="TituloCaja1"> 
+                 Tutorial: estadística descriptiva 
+            </p> 
+        </div>
+        <!-- Contenedor para navegación y contenido -->
+        <div id="containment">
+            <!-- Barra de navegación -->
+            <div id="navigator">
+               <h2> Menú </h2>
+              <br> 
+                  <a href="mediana.html" class="btn btn-primary"> Tutorial Mediana </a>
+                  <br> <br> 
+                  <a href="varianza1.html" class="btn btn-primary"> Tutorial Varianza 1 </a>
+                  <br> <br> 
+                  <a href="varianza2.html" class="btn btn-primary"> Tutorial Varianza 2 </a>
+
+
+            </div>
+            <!-- Área de contenido principal -->
+            <div id="content">
+                <div id="caja1" class="CajaPrincipal"> 
+
+                    <div>
+                       <p class="TituloCaja1">
+                           Cálculo de la  media aritmética 
+                       </p>
+                   
+                       <p>
+                   La media o promedio aritmético es la medida de tendencia central más usada en estadística, 
+                   por lo que es de vital importancia saber calcularla. Este tutorial te enseña como cacular y te permite
+                   auto evaluarte mediante ejercicios dinámicos. 
+                       </p>
+                   
+                   <p>
+                   <strong>Definición: </strong> Dado un conjunto de \(n\)  datos \(x_1,x_2,\ldots,x_n\), su media aritmética se define como \[
+                   \bar{x}=\frac{x_1+x_2+\cdots+x_n}{n}=\frac{\sum\limits_{i=1}^nx_i}{n}\]  
+                    </p>
+                   
+                    <p>
+                    <strong>Ejemplo: </strong> Calculemos la media aritmética de los datos que se muestran en la siguiente tabla: 
+                   
+                   </p>
+                   
+                   </div>  
+                    
+                    <div> 
+                    
+                    <table border="1" class="table table-striped" > 
+                       <tbody id="tableBody">
+                       </tbody>
+                   </table>
+                   
+                   <div class="Solucion">
+                   <p>El número de datos es \(n=\) <span id="NDatos"></span>, la suma de los datos es \(\sum_{i=1}^nx_i=\) <span id="SumaDatos"></span>
+                   y por tanto la media es  <span id="SDBis"></span> / <span id="NDBis"></span> \(=\) <span id="MediaDatos"></span> </p>     
+                   
+                       <div>
+                   
+                   </div>
+                   
+                   
+                   <!-- Div para el ejercicio  -->
+                   
+                   <div> 
+                       <p class="TituloCaja1">
+                           Ejercicio para practicar  
+                       </p>
+                   
+                       <p>
+                   Considera los datos que se muestran en la siguiente tabla 
+                               </p>
+                   
+                    <table border="1" class="table table-striped" > 
+                                   <tbody id="tablaEjercicio">
+                   
+                                   </tbody>
+                   </table>
+                   
+                   <p>
+                   Calcule la suma y el promedio de los datos  
+                                   </p> 
+                   
+                   <p>La suma es <span id="SumaDatosEjer"></span>, y el promedio es <span id="PromedioDatosEjer"></span> esto es para verificar 
+                   
+                   </p>     
+                                       
+                   
+                   </div>
+                   
+                   
+                   
+                   
+                   
+                   
+                       <p class="TituloCaja1">
+                   Ingrese aquí su respuesta  
+                       </p>
+                   
+                   
+                   <div class="Formulario"> 
+                   <form class="CajaFormulario" id="CapturaRespuesta">  
+                       <div>
+                           <input type="number" id="Suma" step="0.0001" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Suma">
+                           <small id="recibeSuma" class="form-text text-muted">Digite el valor de la suma</small> 
+                         </div>
+                   
+                         <div>
+                           
+                           <input type="number" id="Promedio" step="0.0001" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Media">
+                           <small id="recibeMedia" class="form-text text-muted">Digite el valor de la media con 3 cifras decimales</small> 
+                         </div>
+                         <BR> 
+                         <div class="center">
+                         <button type="submit" class="btn btn-primary">Verificar</button>
+                       </div>
+                       <BR> 
+                   </form>
+                   </div>
+                   
+                   
+                   
+                   <div id="alertaExito" class="alert alert-success" role="alert">
+                       La suma es correcta, felicidades!
+                   </div>
+                   <div id="alertaError" class="alert alert-danger" role="alert">
+                       La suma es incorrecta! Inténtalo de nuevo. 
+                   </div>
+                   
+                   <div id="alertaExitoPromedio" class="alert alert-success" role="alert">
+                       El promedio es correcto, Felicidades !
+                   </div>
+                   <div id="alertaErrorPromedio" class="alert alert-danger" role="alert">
+                       El promedio es incorrecto!  Inténtalo de nuevo 
+                   </div>
+                   
+                   
+                   </div>
+                      
+
+                
+            </div>
+        </div>
+        <!-- Sección del pie de página -->
+        <div id="footer">
+           Todos los derechos reservados: Mario Alfonso Morales Rivera
+        </div>
+    </div>
+
+
+
+
+
+
+<script src="./js/index.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
